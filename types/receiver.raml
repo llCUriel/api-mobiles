@@ -1,0 +1,23 @@
+#%RAML 1.0
+title: Receiver top up
+
+uses:
+  serviceProvider: serviceProvider.raml
+
+types:
+  receiver:
+    type: object
+    properties:
+      mobile:
+        type: string
+        description: |
+          Beneficiary mobile phone number.
+      alias:
+        type: string
+        description: |
+          User customizable alias for identifying the stored up receriver.
+        required: false
+      serviceProvider:
+        type: serviceProvider.serviceProvider
+        description: |
+          Company that holds the mobiles services.

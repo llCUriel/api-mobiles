@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": "1234",
+      "name": "Movistar",
+      "logo": {
+        "id": "logo1",
+        "name": "logo",
+        "url": "http://www.logo.com"
+      }
+    },
+    {
+      "id": "12",
+      "name": "Telcel",
+      "logo": {
+        "id": "logo1",
+        "name": "logo",
+        "url": "http://www.logoTelcel.com"
+      }
+    }
+  ]
+}

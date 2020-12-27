@@ -1,0 +1,63 @@
+#%RAML 1.0
+title: Api Mobiles
+version: v0.0.0
+description: !include docs/apiDescription.md
+baseUri: https://www.trainees.com/api-mobiles/v0
+
+uses:
+  serviceProviders: !include types/serviceProviders.raml
+  serviceProvider: !include types/serviceProvider.raml
+  topUp: !include types/topUp.raml
+
+
+/service-providers:
+  description: |
+    Recurso que contiene la información relacionada a las compañías telefónicas.
+  get:
+    description: |
+      Listado de las compañías telefónicas disponibles.
+    responses:
+      200:
+        description: |
+          Ok
+        body:
+          application/json:
+            example: !include examples/service-provider/http_200.json
+            type: object
+            properties:
+              data:
+                type: serviceProviders.serviceProviders
+  /{service-provider-id}:
+    description: |
+      Recurso que contiene el detalle de una compañia telefónica.
+    get:
+      description: |
+        Consulta el detalle de una compañia telefonica en especifico.
+      responses:
+        200:
+          description: |
+            OK
+          body:
+          application/json:
+            example: !include examples/service-provider/service-provider-id/http_200.json
+            type: object
+            properties:
+              data:
+                type: serviceProvider.serviceProvider
+/top-ups:
+  description: |
+    Recurso que realiza la recarga de tiempo aire.
+  post:
+    description: |
+      Realiza la petición de la recarga telefonica
+    responses:
+      200:
+        description: |
+          Ok
+        body:
+          application/json:
+            example: !include examples/TopUp/http_200.json
+            type: object
+            properties:
+              data:
+                type: topUp.topUp

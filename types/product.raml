@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: Entity product
+
+types:
+  product:
+    type: object
+    properties:
+      id:
+        type: string
+        description: |
+          Product identifier.
+      name:
+        type: string
+        description: |
+          Product name.
+        required: false

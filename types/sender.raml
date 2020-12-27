@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: Entity sender
+
+uses:
+  product: product.raml
+
+types:
+  sender:
+    type: object
+    properties:
+      contractId:
+        type: string
+        description: |
+          Contract identifier.
+      product:
+        type: product.product
+        description: |
+          Product of the contract.
+        required: false

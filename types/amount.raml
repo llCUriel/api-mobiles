@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: Entity amount.
+
+types:
+  amount:
+    type: object
+    properties:
+      amount:
+        type: number
+        description: |
+          Monetary amount.
+        required: false
+      currency:
+        type: string
+        description: |
+          Currency related to the amount.
+        required: false

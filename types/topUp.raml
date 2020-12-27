@@ -1,0 +1,35 @@
+#%RAML 1.0
+title: Entity top up
+
+uses:
+  amount: amount.raml
+  sender: sender.raml
+  receiver: receiver.raml
+
+types:
+  topUp:
+    type: object
+    properties:
+      id:
+        type: string
+        description: |
+          Top up identifier.
+      sentMoney:
+        type: amount.amount
+        description: |
+          Sent money of the top up.
+        required: false
+      operationDate:
+        type: datetime
+        description: |
+          Operation date of the top up.
+      sender:
+        type: sender.sender
+        description: |
+          Contract from wich the money is taken to proceed with top up operation.
+        required: false
+      receiver:
+        type: receiver.receiver
+        description: |
+          Mobile phone that receives money to increase its balance.
+        required: false

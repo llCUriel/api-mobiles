@@ -1,0 +1,43 @@
+{
+  "id": "1234",
+  "receiver": {
+    "mobile": "5572825823",
+    "alias": "Cesar",
+    "serviceProvider": {
+      "id":"12345",
+      "name":"Movistar",
+      "logo": {
+        "id": "logo1",
+        "name": "logo",
+        "url": "http://www.logoMovistar.com"
+      },
+      "possibleAmounts":[
+        {
+          "amount": 20,
+          "currency": "MXN"
+        },
+        {
+          "amount": 30,
+          "currency": "MXN"
+        },
+        {
+          "amount": 50,
+          "currency": "MXN"
+        }
+      ]
+
+    }
+  },
+  "sentMoney":{
+    "amount": 60,
+    "currency": "MXN"
+  },
+  "sender":{
+    "contractId":"123456",
+    "product":{
+      "id":"1234567",
+      "name":"Recarga"
+    }
+  },
+  "operationDate": "2020-09-09"
+}

@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: Entity ServiceProvider.
+
+uses:
+  logo: logo.raml
+
+types:
+  serviceProviders:
+    type: array
+    items:
+      properties:
+        id:
+          type: string
+          description: |
+            Service provider identifier.
+          required: false
+        name:
+          type: string
+          description: |
+            Service provider name.
+          required: false
+        logo:
+          type: logo.logo
+          description:
+            Service provide logo.
+          required: false
